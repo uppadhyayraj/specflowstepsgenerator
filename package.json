@@ -1,0 +1,93 @@
+{
+    "name": "stepGenerator",
+    "displayName": "SpecFlow Steps Generator",
+    "description": "Generate the Step Definiton File",
+    "version": "0.0.1",
+    "publisher": "RajUppadhyay",
+    "icon": "logo.png",
+    "engines": {
+        "vscode": "^1.18.0"
+    },
+    "categories": [
+        "Extension Packs"
+    ],
+    "extensionPack": [ 
+        "stepGenerator"
+    ],
+    "keywords": [
+        "dotnet",
+        "Dot Net",
+        "csharp",
+        "SpecFlow",
+        ".NET Core"
+    ],
+    "bugs": {
+        "url": "https://github.com/uppadhyayraj/vscode-dotnet/issues",
+        "email": "uppadhyayraj@gmail.com"
+    },
+    "homepage": "https://github.com/uppadhyayraj/vscode-dotnet/blob/master/README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/uppadhyayraj/vscode-dotnet.git"
+    },
+    "activationEvents": [
+        "onCommand:dotnet.generatesteps"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "dotnet.generatesteps",
+                "title": "Generate Steps Definition"
+            }
+        ],
+        "menus": {
+            "explorer/context": [
+                {
+                    "when": "resourceExtname == .feature",
+                    "command": "dotnet.generatesteps",
+                    "group": "navigation@1"
+                }
+            ]
+        },
+        "configuration": {
+            "type": "object",
+            "title": "SpecFlow Steps Generator",
+            "properties": {
+                "stepGenerator.stepDefinitonFolderName": {
+                    "type": "string",
+                    "default": "CalculatorSelenium.Specs/StepDefinitions",
+                    "description": "Folder name in current project to store the generated Step defnition file."
+                },
+                "stepGenerator.defaultClassName": {
+                    "type": "string",
+                    "default": "StepDefinitions.cs",
+                    "description": "Name for generated step definitios file."
+                },
+                "stepGenerator.unitTestProvider": {
+                    "type": "string",
+                    "default": "nunit",
+                    "description": "Name for SpecFlow unit test provider e.g. Nunit/MStest."
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "@types/mocha": "^2.2.42",
+        "@types/node": "^7.0.43",
+        "tslint": "^5.8.0",
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.37"
+    },
+    "dependencies": {
+        "applicationinsights": "^1.0.0",
+        "latest": "^0.2.0"
+    }
+}
