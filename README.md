@@ -26,6 +26,7 @@
 
 - Handling Table paramemter in step deinition currently it is not adding Table parameter in step definition.
 - Existing Steps Definition cchecking while generating steps definitons.
+- Default variable type is appearing as string, workaround is to update post steps generation. Will be adding a configuration for override the default type and set it as "dynamic" so that it works well.
 
 
 ## Release Notes:
