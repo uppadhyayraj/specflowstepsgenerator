@@ -4,13 +4,14 @@
 
 ```Specflow Step Definition Generator``` is a tool to generate the SpecFlow step definition in VS Code with familiar Visual Studio IDE experince with additional options togenerate full Binding class.
 
-
+## Getting started: Setting up SpecFlow in VS Code IDE
+[Configure VS Code for Running SpecFlow Tests](https://medium.com/@uppadhyayraj/specflow-integration-in-vs-code-single-ide-across-different-platforms-dac954aedf9e)
 ## Different options available to Generate the Step Definition:
  - [a] - Generate step definition for the selected step(s) with class definition in Clipborad or click ```CTRL+SHIFT+1```
  - [b] - Generate step definition by creating a class with step definitons for the selected step(s) in a file selected by user or use ```CTRL+ALT+2``` as shortcut keys
  - [c] - Generate step definition by copy to clipboard or alternatively use keys ```CTRL+ALT+3```
 
-## Getting started:
+## Using the extension:
 1. Open any ```.feature``` file in vs code editor
 2. Select the step(s) which needs to generate step definition(s)
 3. Right click on the editor and select the appropriate option to generate the Step Definition(s)
@@ -25,7 +26,7 @@
 ## Future Ahead/Known Bugs:
 
 - Handling Table paramemter in step deinition currently it is not adding Table parameter in step definition.
-- Existing Steps Definition cchecking while generating steps definitons.
+- Existing Steps Definition checking while generating steps definitons.
 - Default variable type is appearing as string, workaround is to update post steps generation. Will be adding a configuration for override the default type and set it as "dynamic" so that it works well.
 
 
