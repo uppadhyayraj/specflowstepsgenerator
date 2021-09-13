@@ -8,7 +8,7 @@
 [Configure VS Code for Running SpecFlow Tests](https://medium.com/@uppadhyayraj/specflow-integration-in-vs-code-single-ide-across-different-platforms-dac954aedf9e)
 ## Different options available to Generate the Step Definition:
  - [a] - Generate step definition for the selected step(s) with class definition in Clipborad or click ```CTRL+SHIFT+1```
- - [b] - Generate step definition by creating a class with step definitons for the selected step(s) in a file selected by user or use ```CTRL+ALT+2``` as shortcut keys
+ - [b] - Generate step definition by creating a class with step definitions for the selected step(s) in a file selected by user or use ```CTRL+ALT+2``` as shortcut keys
  - [c] - Generate step definition by copy to clipboard or alternatively use keys ```CTRL+ALT+3```
 
 ## Using the extension:
@@ -23,16 +23,19 @@
 6. If you select the option "SpecFlow Step Definition - Generate in an existing file", then it will show the option for searching and selecting an existing C# class file and override the file contents with copied step definitions along with full class structure. 
     ```Note: This option is useful when you wanted to create a new step definition file from scratch after you have already created skeleton for your solution.```
 
-## Future Ahead/Known Bugs:
+## Future Enhancements/Known Bugs:
 
 - Handling Table paramemter in step deinition currently it is not adding Table parameter in step definition.
-- Existing Steps Definition checking while generating steps definitons.
-- Default variable type is appearing as string, workaround is to update post steps generation. Will be adding a configuration for override the default type and set it as "dynamic" so that it works well.
+- Existing Steps Definition checking while generating steps definitions.
+- Fixed <del>Default variable type is appearing as string, workaround is to update post steps generation. Will be adding a configuration for override the default type and set it as "dynamic" so that it works well.</del>
 
 
 ## Release Notes:
+## [1.0.5]
+- Removal of punctuations from Method names
 
-Notes for the released versions
+### 1.0.4
+Fixed the issue "Default variable type is appearing as string". Now step bindings correctly picking up string and numbers.
 
 ### 1.0.0:
 
