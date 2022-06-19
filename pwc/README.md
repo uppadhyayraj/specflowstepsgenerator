@@ -14,7 +14,8 @@
 1. Open any ```.feature``` file in vs code editor
 2. Select the step(s) which needs to generate step definition(s)
 3. Right click on the editor and select the appropriate option to generate the Step Definition(s)
-![Various Options to Generate Step Definition(s)](https://raw.githubusercontent.com/uppadhyayraj/specflowstepsgenerator/main/images/usage.png)
+![Various Options to Generate Step Definition(s)](https://raw.githubusercontent.com/uppadhyayraj/specflowstepsgenerator/main/pwc/PWCTool.png)
+4. Extension create the required folder structure i.e. folder with feature file name and then js file under that folder if folder doesn't exists, otherwise append the existing step definition js file if already exits.
 
 
 ## Future Enhancements/Known Bugs:
