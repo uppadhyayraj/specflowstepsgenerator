@@ -1,6 +1,6 @@
 # README
 
-# Specflow Step Definition Generator
+# Specflow/Reqnroll Step Definition Generator
 
 ```Specflow Step Definition Generator``` is a tool to generate the SpecFlow step definition(s) in VS Code with familiar Visual Studio IDE experince with additional options togenerate full Binding class. With SpecFlow retiring now this extension has suport for and Reqnroll new Dotnet BDD framework.
 
