@@ -3,7 +3,7 @@
 # Reqnroll/Specflow Step Definition Generator (With AI Assitant)
 
 ```Reqnroll/Specflow Step Definition Generator``` is a tool to generate the SpecFlow step definition(s) in VS Code with familiar Visual Studio IDE experince with additional options togenerate full Binding class. With SpecFlow retiring now this extension has suport for and Reqnroll new Dotnet BDD framework. 
-Now with this latest version it comes with configurable AI Assistant
+Now with this latest version it comes with configurable AI Assistant.
 
 ## Getting started: Setting up Dotnet BDD in VS Code IDE
 [Configure VS Code for Running BDD Tests](https://medium.com/@uppadhyayraj/specflow-integration-in-vs-code-single-ide-across-different-platforms-dac954aedf9e)
@@ -119,7 +119,8 @@ ollama pull hhao/qwen2.5-coder-tools:32b
 
 ## Future Enhancements/Known Bugs:
 
-- In Non AI Assitant mode - Handling Table paramemter in step deinition currently it is not adding Table parameter in step definition.
+- **In AI Assitant mode** - It may take longer sometimes due to other processes running simultaneously, so please wait or close other applications if it is too slow. Additionally, the default model has approx 96-97% accuracy; please rerun the generation to fix any discrepancies.
+- **In Non AI Assitant mode** - Handling Table paramemter in step deinition currently it is not adding Table parameter in step definition.
 - Existing Steps Definition checking while generating steps definitions.
 - Fixed <del>Default variable type is appearing as string, workaround is to update post steps generation. Will be adding a configuration for override the default type and set it as "dynamic" so that it works well.</del>
 
