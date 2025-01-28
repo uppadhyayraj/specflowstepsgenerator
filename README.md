@@ -41,7 +41,65 @@ ollama pull hhao/qwen2.5-coder-tools:32b
 ![New AI Assistant Setting for Generating Step Definition](https://raw.githubusercontent.com/uppadhyayraj/specflowstepsgenerator/main/images/AIAssitant.png)
 - Additional settings include **Model Name**, which defaults to hhao/qwen2.5-coder-tools:32b. and **Ollama Url** (Deafults to http://127.0.0.1:11434/api/generate). These settings can be updated as required.
 
+``` Make sure to restart VS Code after making these changes!```
 
+### Key Features with AI Assitant
+1. Complete Local LLMs and work offline as well. So no need to share your system access/data etc.
+2. Controlled LLMs/Models
+3. Generate Step Definitions with correct data types 
+4. Identifies and Generate Unique Step Definitions, even multiple occurances of similar steps found.
+5. Suggests commneted code implementations for enhanced experience. E.g. 
+```feature
+    When I calculate the compound interest
+```
+```csharp
+		[When("I calculate the compound interest")]
+		public void WhenICalculateTheCompoundInterest()
+		{
+			// Implement logic to calculate compound interest using stored values from Given step
+			// Example:
+			// decimal calculatedInterest = CalculateCompoundInterest(principal, rate, time, n);
+		}
+```
+
+6. Handles Datatables with code suggestions e.g.
+```feature
+    Scenario: Test with DataTable
+        Given the following data
+            | Principal | Rate | Time | N | ExpectedCompoundInterest |
+            | 1000      | 5    | 2    | 4 | 1104.94                 |
+```
+
+```csharp
+		[Given(@"the following data")]
+		public void GivenTheFollowingData(Table table)
+		{
+			foreach (var row in table.Rows)
+			{
+				int principal = int.Parse(row["Principal"]);
+				double rate = double.Parse(row["Rate"]);
+				int time = int.Parse(row["Time"]);
+				int n = int.Parse(row["N"]);
+				double expectedCompoundInterest = double.Parse(row["ExpectedCompoundInterest"]);
+
+				// Implementation to handle each row of data
+			}
+		}
+
+```
+7. Handles Cucumber Expressions well e.g. 
+```feature
+    Then the calculated compound interest should be 1104.94 with a tolerance of 0.01 and name "Raj"
+```
+```csharp
+		[Then("the calculated compound interest should be {decimal} with a tolerance of {decimal} and name {string}")]
+		public void ThenTheCalculatedCompoundInterestShouldBeWithAToleranceOfAndName(decimal expectedValue, decimal tolerance, string name)
+		{
+			// Implement logic to compare calculated interest with expected value within the given tolerance
+			// Example:
+			// Assert.IsTrue(Math.Abs(calculatedInterest - expectedValue) <= tolerance);
+		}
+```
 ## Different options available to Generate the Step Definition:
  - [a] - Generate step definition for the selected step(s) with class definition in Clipborad or click ```CTRL+SHIFT+1```
  - [b] - Generate step definition by creating a class with step definitions for the selected step(s) in a file selected by user or use ```CTRL+ALT+2``` as shortcut keys
