@@ -107,7 +107,7 @@ ollama pull hhao/qwen2.5-coder-tools:32b
 
 ## Using the extension:
 1. Open any ```.feature``` file in vs code editor
-2. Select the step(s) which needs to generate step definition(s)
+2. Select the step(s) which needs to generate step definition(s) or Select the whole feature file. [```Note: Without selecting step(s) Context menu or shortcut will not work```]
 3. Right click on the editor and select the appropriate option to generate the Step Definition(s)
 ![Various Options to Generate Step Definition(s)](https://raw.githubusercontent.com/uppadhyayraj/specflowstepsgenerator/main/images/Options.png)
 4. If you select "BDD Step Definition - Generate Class to Clipboard", it will copy the steps definition method(s) along with complete class structure in Clipboard. 
