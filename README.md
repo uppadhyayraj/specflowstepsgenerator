@@ -39,6 +39,7 @@ ollama pull hhao/qwen2.5-coder-tools:32b
 ### Enabling the AI Assitant
 - On the same setting page (as used above to select the BDD Framework), look for "Need AIAssistant" setting (By Default it is unchecked), check it to have AI in action
 ![New AI Assistant Setting for Generating Step Definition](https://raw.githubusercontent.com/uppadhyayraj/specflowstepsgenerator/main/images/AIAssitant.png)
+- Additional settings include **Model Name**, which defaults to hhao/qwen2.5-coder-tools:32b. and **Ollama Url** (Deafults to http://127.0.0.1:11434/api/generate). These settings can be updated as required.
 
 
 ## Different options available to Generate the Step Definition:
