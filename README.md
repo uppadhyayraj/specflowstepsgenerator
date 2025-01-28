@@ -10,7 +10,7 @@ Now with this latest version it comes with configurable AI Assistant
 
 # Disclaimer
 
-```The developer of this tool is not liable for any unintended effects resulting from its use. The end user assumes full liability for any consequences arising from the use of this tool. Considering data security, this tool only supports local LLM and does not utilize services such as ChatGPT or other external LMMs.```
+```The developer of this tool is not liable for any unintended effects resulting from its use. The end user assumes full liability for any consequences arising from the use of this tool. Considering data security, this tool only supports local LLM and does not utilize services such as ChatGPT or other external LLMs.```
 
 ## Configuring which Dotnet BDD Framework to use?
 This extension now supports both SpecFlow for existing projects and Reqnroll for new projects using dotnet BDD. It is configured to use SpecFlow by default. To use Reqnroll, follow these steps:
