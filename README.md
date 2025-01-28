@@ -16,9 +16,9 @@ Now with this latest version it comes with configurable AI Assistant
 This extension now supports both SpecFlow for existing projects and Reqnroll for new projects using dotnet BDD. It is configured to use SpecFlow by default. To use Reqnroll, follow these steps:
 1. Upgrade the extension to the latest version.
 2. Navigate to the VS Code settings page.
-3. Search for "Dotnet BDD" and then Select the "Dotnet BDD Step Definition Generator" under Extensions, then from Right hand side you will be able to a field to select teh BDD framework
+3. Search for "Dotnet BDD" and then Select the "Dotnet BDD Step Definition Generator" under Extensions, then from Right hand side you will be able to a field to select the BDD framework
 ![New Setting for Selecting the BDD Framework e.g. SpecFlow or Reqnroll](https://raw.githubusercontent.com/uppadhyayraj/specflowstepsgenerator/main/images/newsetting.png)
-4. Change this value to "Reqnroll" and save the settings.
+4. Default value for this setting is "Reqnroll" and you can change this value to "SpecFlow" to generate SpecFlow bindings.
 
 ## Ready to Unleash the Power of AI Magic? Yes! follow steps given below:
 This tool utilizes a Local LLM to prioritize the security of your solution and data incorporated into automation. This approach offers numerous advantages, including:
