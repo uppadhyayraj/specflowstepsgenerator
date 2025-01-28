@@ -1,19 +1,44 @@
 # README
 
-# Specflow/Reqnroll Step Definition Generator
+# Reqnroll/Specflow Step Definition Generator (With AI Assitant)
 
-```Specflow Step Definition Generator``` is a tool to generate the SpecFlow step definition(s) in VS Code with familiar Visual Studio IDE experince with additional options togenerate full Binding class. With SpecFlow retiring now this extension has suport for and Reqnroll new Dotnet BDD framework.
+```Reqnroll/Specflow Step Definition Generator``` is a tool to generate the SpecFlow step definition(s) in VS Code with familiar Visual Studio IDE experince with additional options togenerate full Binding class. With SpecFlow retiring now this extension has suport for and Reqnroll new Dotnet BDD framework. 
+Now with this latest version it comes with configurable AI Assistant
 
 ## Getting started: Setting up SpecFlow in VS Code IDE
-[Configure VS Code for Running SpecFlow Tests](https://medium.com/@uppadhyayraj/specflow-integration-in-vs-code-single-ide-across-different-platforms-dac954aedf9e)
+[Configure VS Code for Running BDD Tests](https://medium.com/@uppadhyayraj/specflow-integration-in-vs-code-single-ide-across-different-platforms-dac954aedf9e)
+
+# Disclaimer
+
+```The developer of this tool is not liable for any unintended effects resulting from its use. The end user assumes full liability for any consequences arising from the use of this tool. Considering data security, this tool only supports local LLM and does not utilize services such as ChatGPT or other external LMMs.```
 
 ## Configuring which Dotnet BDD Framework to use?
 This extension now supports both SpecFlow for existing projects and Reqnroll for new projects using dotnet BDD. It is configured to use SpecFlow by default. To use Reqnroll, follow these steps:
 1. Upgrade the extension to the latest version.
 2. Navigate to the VS Code settings page.
-3. Search for "Specflow Steps Definition Generator." You will see a dropdown with the default value "SpecFlow."
+3. Search for "Dotnet BDD" and then Select the "Dotnet BDD Step Definition Generator" under Extensions, then from Right hand side you will be able to a field to select teh BDD framework
 ![New Setting for Selecting the BDD Framework e.g. SpecFlow or Reqnroll](https://raw.githubusercontent.com/uppadhyayraj/specflowstepsgenerator/main/images/newsetting.png)
 4. Change this value to "Reqnroll" and save the settings.
+
+## Ready to Unleash the Power of AI Magic? Yes! follow steps given below:
+This tool utilizes a Local LLM to prioritize the security of your solution and data incorporated into automation. This approach offers numerous advantages, including:
+- **Enhanced Control**: Maintain complete control over LLM usage.
+- **Data Security**: Prevent data leaks by eliminating the need to share data outside your organization.
+- **Privacy**:  No requirement to grant AI agents permissions to your machine.
+- **Offline Functionality**: Use the tool offline without an internet connection.
+
+
+### Pre-Requisites for Using AI Assitant
+1. Need around 19 GB for LLM Model and other system requirements please refer: https://ollama.com/hhao/qwen2.5-coder-tools:32b 
+2. **Install Ollama CLI**: Follow instructions specific to your OS as given here: https://ollama.com/download
+3. **Download Codellama Model**: Post successful installation of Ollama, Run following in your terminal (for Mac/Linux) or in Command Prompt on windows.
+```bash
+ollama pull hhao/qwen2.5-coder-tools:32b
+```
+
+### Enabling the AI Assitant
+- On the same setting page (as used above to select the BDD Framework), look for "Need AIAssistant" setting (By Default it is unchecked), check it to have AI in action
+![New AI Assistant Setting for Generating Step Definition](https://raw.githubusercontent.com/uppadhyayraj/specflowstepsgenerator/main/images/AIAssitant.png)
 
 
 ## Different options available to Generate the Step Definition:
@@ -35,14 +60,18 @@ This extension now supports both SpecFlow for existing projects and Reqnroll for
 
 ## Future Enhancements/Known Bugs:
 
-- Handling Table paramemter in step deinition currently it is not adding Table parameter in step definition.
+- In Non AI Assitant mode - Handling Table paramemter in step deinition currently it is not adding Table parameter in step definition.
 - Existing Steps Definition checking while generating steps definitions.
 - Fixed <del>Default variable type is appearing as string, workaround is to update post steps generation. Will be adding a configuration for override the default type and set it as "dynamic" so that it works well.</del>
 
 
 ## Release Notes:
+## [2.1.0]
+- Added AI Assitant powered by local LLM
+
 ## [2.0.0]
 - Extented Extension to Generate Step Definitions for Reqnroll Framework aong with compatibility for SpecFlow
+
 ## [1.0.5]
 - Removal of punctuations from Method names
 
