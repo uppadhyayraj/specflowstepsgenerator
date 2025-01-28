@@ -5,7 +5,7 @@
 ```Reqnroll/Specflow Step Definition Generator``` is a tool to generate the SpecFlow step definition(s) in VS Code with familiar Visual Studio IDE experince with additional options togenerate full Binding class. With SpecFlow retiring now this extension has suport for and Reqnroll new Dotnet BDD framework. 
 Now with this latest version it comes with configurable AI Assistant
 
-## Getting started: Setting up SpecFlow in VS Code IDE
+## Getting started: Setting up Dotnet BDD in VS Code IDE
 [Configure VS Code for Running BDD Tests](https://medium.com/@uppadhyayraj/specflow-integration-in-vs-code-single-ide-across-different-platforms-dac954aedf9e)
 
 # Disclaimer
