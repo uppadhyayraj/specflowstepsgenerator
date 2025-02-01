@@ -41,7 +41,7 @@ This tool utilizes a Local LLM to prioritize the security of your solution and d
    | **Model Name**               | **Command to Download**                    | **Size** | **Speed** | **Accuracy** | **Comments**                                                                                  |
    | ---------------------------- | ------------------------------------------ | -------- | --------- | ------------ | --------------------------------------------------------------------------------------------- |
    | hhao/qwen2.5-coder-tools:32b | `ollama pull hhao/qwen2.5-coder-tools:32b` | 19 GB    | Low       | 99-100%      | Use this model for accuracy (but it can be bit slow)                                          |
-   | codeqwen                     | `ollama pull codeqwen`                     | 5.5 GB   | Fast      | 92-95%       | Good for low machines but it generates duplicate step definitions if steps have been repeated |
+   | codeqwen                     | `ollama pull codeqwen`                     | 5.5 GB   | Fast      | 92-95%       | Good for low machines but it generates duplicate step definitions (in case steps have been repeated in the feature file) |
    | codegemma                    | `ollama pull codegemma`                    | 5.0 GB   | Fast      | 80-90%       | Use this model on low configuration machines                                                  |
 
 2. **Install Ollama CLI**: Follow instructions specific to your OS as given here: https://ollama.com/download
