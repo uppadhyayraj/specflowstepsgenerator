@@ -36,12 +36,13 @@ This tool utilizes a Local LLM to prioritize the security of your solution and d
 
 1. Need around upto 19 GB (based on model selected) for LLM Model and other system requirements please refer: https://ollama.com/hhao/qwen2.5-coder-tools:32b
 
-   **Model Information**
+   **Recommended Models**
 
-   | **Model Name**               | **Command to Download**                    | **Size** | **Speed** | **Accuracy** | **Recommendation**                                   |
-   | ---------------------------- | ------------------------------------------ | -------- | --------- | ------------ | ---------------------------------------------------- |
-   | hhao/qwen2.5-coder-tools:32b | ```ollama pull hhao/qwen2.5-coder-tools:32b``` | 19 GB    | Low       | 99-100%      | Use this model for accuracy (but it can be bit slow) |
-   | codegemma                    | ```ollama pull codegemma```                    | 5.0 GB   | Fast      | 80-90%       | Use this model on low configuration machines         |
+   | **Model Name**               | **Command to Download**                    | **Size** | **Speed** | **Accuracy** | **Comments**                                                                                  |
+   | ---------------------------- | ------------------------------------------ | -------- | --------- | ------------ | --------------------------------------------------------------------------------------------- |
+   | hhao/qwen2.5-coder-tools:32b | `ollama pull hhao/qwen2.5-coder-tools:32b` | 19 GB    | Low       | 99-100%      | Use this model for accuracy (but it can be bit slow)                                          |
+   | codeqwen                     | `ollama pull codeqwen`                     | 5.5 GB   | Fast      | 92-95%       | Good for low machines but it generates duplicate step definitions if steps have been repeated |
+   | codegemma                    | `ollama pull codegemma`                    | 5.0 GB   | Fast      | 80-90%       | Use this model on low configuration machines                                                  |
 
 2. **Install Ollama CLI**: Follow instructions specific to your OS as given here: https://ollama.com/download
 3. **Download Codellama Model**: Post successful installation of Ollama, Run following in your terminal (for Mac/Linux) or in Command Prompt on windows.
@@ -151,9 +152,11 @@ ollama pull codegemma
 - Fixed <del>Default variable type is appearing as string, workaround is to update post steps generation. Will be adding a configuration for override the default type and set it as "dynamic" so that it works well.</del>
 
 ## Release Notes:
+
 ## [2.1.1]
 
 - Updated info with other model **codegemma** and with fine tuned prompt
+
 ## [2.1.0]
 
 - Added AI Assitant powered by local LLM
